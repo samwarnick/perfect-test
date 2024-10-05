@@ -24,6 +24,7 @@ app.get('/', async (c) => {
 	return c.html(
 		<Layout>
 			<Hello />
+			<h1>Hello</h1>
 			<ul id="messages">
 				{allMessages.map((m) => (
 					<li>{m.message}</li>
