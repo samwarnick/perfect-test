@@ -7,6 +7,7 @@ BUN="$(which bun)"
 USER="$(whoami)"
 
 bun install
+bun db:migrate
 WORKING_DIR=$WORKING_DIR PROJECT_NAME=$PROJECT_NAME BRANCH=$BRANCH envsubst < scripts/templates/post-receive > .git/hooks/post-receive
 chmod +x .git/hooks/post-receive
 mkdir tmp
